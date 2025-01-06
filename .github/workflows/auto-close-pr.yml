@@ -16,8 +16,6 @@ jobs:
           if [[ "$GITHUB_ACTOR" != "abdullah-wn" ]]; then
             gh pr comment ${{ github.event.pull_request.number }} -R ${{ github.repository }} -b "Hi @${{ github.actor }}, thank you for your interest in this project. However, this repository is not accepting contributions or pull requests at this time. Feel free to fill an issue, if you want to request a change."
             gh pr close ${{ github.event.pull_request.number }} -R ${{ github.repository }}
-          else
-            gh pr comment ${{ github.event.pull_request.number }} -R ${{ github.repository }} -b "Authorized pull request"
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
