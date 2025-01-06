@@ -13,9 +13,7 @@ jobs:
     steps:
       - name: Check PR Author
         run: |
-          if [[ "$GITHUB_ACTOR" != "your-username" && "$GITHUB_ACTOR" != "team-member-1" ]]; then
-            echo "This repo is not open to external contributions for now"
-            gh pr close ${{ github.event.pull_request.number }} -R ${{ github.repository }}
-          fi
+          gh pr comment ${{ github.event.pull_request.number }} -R ${{ github.repository }} -b "Hi @${{ github.actor }}, thank you for your interest in this project. However, this repository is not accepting contributions or pull requests at this time. Feel free to fill an issue, if you want request a change."
+          gh pr close ${{ github.event.pull_request.number }} -R ${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
