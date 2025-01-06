@@ -15,7 +15,7 @@ jobs:
       - name: Check Organization Membership and Handle PR
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ORGANIZATION: your-organization-name
+          ORGANIZATION: Lazy-work
         run: |
           # Check if the PR author is part of the organization
           response=$(curl -s -o response.json -w "%{http_code}" \
