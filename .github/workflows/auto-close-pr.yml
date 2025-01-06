@@ -2,7 +2,7 @@ name: Auto Close PRs
 
 permissions:
   pull-requests: write
-
+  
 on:
   pull_request:
     types: [opened]
@@ -10,12 +10,35 @@ on:
 jobs:
   close-pr:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check PR Author
-        run: |
-          if [[ "$GITHUB_ACTOR" != "Lazy-work" ]]; then
-            gh pr comment ${{ github.event.pull_request.number }} -R ${{ github.repository }} -b "Hi @${{ github.actor }}, thank you for your interest in this project. However, this repository is not accepting contributions or pull requests at this time. Feel free to fill an issue, if you want to request a change."
-            gh pr close ${{ github.event.pull_request.number }} -R ${{ github.repository }}
-          fi
+      - name: Check Organization Membership and Handle PR
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ORGANIZATION: your-organization-name
+        run: |
+          # Check if the PR author is part of the organization
+          response=$(curl -s -o response.json -w "%{http_code}" \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/orgs/$ORGANIZATION/members/$GITHUB_ACTOR)
+
+          http_status=$(tail -n1 <<< "$response")
+          if [[ "$http_status" == "204" ]]; then
+            echo "PR author $GITHUB_ACTOR is a member of $ORGANIZATION."
+            exit 0
+          else
+            echo "PR author $GITHUB_ACTOR is not a member of $ORGANIZATION. Closing PR."
+
+            # Add a comment to inform the contributor
+            curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments \
+              -d '{"body":"Hi @${{ github.actor }}, thank you for your interest in this project. However, contributions are currently limited to members of the organization: '$ORGANIZATION'. Feel free to fork the repository for personal use."}'
+
+            # Close the pull request
+            curl -X PATCH -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }} \
+              -d '{"state":"closed"}'
+          fi
