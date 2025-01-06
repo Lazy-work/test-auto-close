@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Check PR Author
         run: |
-          if [[ "$GITHUB_ACTOR" != "abdullah-wn" ]]; then
+          if [[ "$GITHUB_ACTOR" != "Lazy-work" ]]; then
             gh pr comment ${{ github.event.pull_request.number }} -R ${{ github.repository }} -b "Hi @${{ github.actor }}, thank you for your interest in this project. However, this repository is not accepting contributions or pull requests at this time. Feel free to fill an issue, if you want to request a change."
             gh pr close ${{ github.event.pull_request.number }} -R ${{ github.repository }}
           fi
