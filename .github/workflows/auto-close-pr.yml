@@ -1,7 +1,6 @@
 name: Auto Close PRs
 
-permissions:
-  pull-requests: write
+permissions: write-all
   
 on:
   pull_request:
