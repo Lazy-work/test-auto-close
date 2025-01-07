@@ -21,11 +21,11 @@ jobs:
 
           # Make the API request and save the response body and HTTP status code
           response_body=$(mktemp)
+          echo "https://api.github.com/orgs/$ORGANIZATION/members/$GITHUB_ACTORn"
           http_status=$(curl -s -o "$response_body" -w "%{http_code}" \
             -H "Authorization: token $GITHUB_TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/orgs/$ORGANIZATION/members/$GITHUB_ACTOR)
-
+            "https://api.github.com/orgs/$ORGANIZATION/members/$GITHUB_ACTORn")
           echo "HTTP Status: $http_status"
           echo "Response Body:"
           cat "$response_body"
