@@ -1,4 +1,10 @@
 name: Changesets
+
+permissions:
+  contents: write # to create release (changesets/action)
+  id-token: write # OpenID Connect token needed for provenance
+  pull-requests: write # to create pull request (changesets/action)
+  
 on:
   push:
     branches:
@@ -8,10 +14,6 @@ env:
   PNPM_CACHE_FOLDER: .pnpm-store
 jobs:
   version:
-    permissions:
-      contents: write # to create release (changesets/action)
-      id-token: write # OpenID Connect token needed for provenance
-      pull-requests: write # to create pull request (changesets/action)
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
