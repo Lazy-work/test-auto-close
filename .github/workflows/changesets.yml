@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - main
-env:
-  CI: true
-  PNPM_CACHE_FOLDER: .pnpm-store
+
+permissions: {}
 jobs:
-  version:
+  release:
+    name: Release
     permissions:
       contents: write # to create release (changesets/action)
       id-token: write # OpenID Connect token needed for provenance
@@ -29,10 +29,10 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
-        id: changesets
         run: pnpm install
         
       - name: create and publish versions
+        id: changesets
         uses: changesets/action@v1
         with:
           version: pnpm ci:version
