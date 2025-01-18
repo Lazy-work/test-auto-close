@@ -5,14 +5,11 @@ on:
     branches:
       - main
 
-permissions: {}
+permissions: write-all
 jobs:
   release:
     name: Release
-    permissions:
-      contents: write # to create release (changesets/action)
-      id-token: write # OpenID Connect token needed for provenance
-      pull-requests: write # to create pull request (changesets/action)
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: checkout code repository
