@@ -1,5 +1,13 @@
 # main
 
+## 1.0.3
+
+### Patch Changes
+
+- [`7bcedb8`](https://github.com/Lazy-work/test-auto-close/commit/7bcedb8ba84c7418fcc5102ddd00b06c41b322b4) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Changes again again
+
+- [#35](https://github.com/Lazy-work/test-auto-close/pull/35) [`71d41f0`](https://github.com/Lazy-work/test-auto-close/commit/71d41f0391f6b1d6a8cdc4872c03c07b1a59476f) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - New changes again
+
 ## 1.0.2
 
 ### Patch Changes
