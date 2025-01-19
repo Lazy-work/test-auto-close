@@ -1,9 +1,11 @@
 {
   "name": "@unisonjs/main",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
-  "dist": ["*"],
+  "dist": [
+    "*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
