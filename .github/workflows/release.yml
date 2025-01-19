@@ -5,11 +5,9 @@ on:
     branches:
       - main
 
-permissions: write-all
 jobs:
   release:
     name: Release
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: checkout code repository
