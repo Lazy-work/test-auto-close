@@ -1,5 +1,11 @@
 # main
 
+## 1.0.4
+
+### Patch Changes
+
+- [#37](https://github.com/Lazy-work/test-auto-close/pull/37) [`2b09053`](https://github.com/Lazy-work/test-auto-close/commit/2b09053ed44394d9e8f32eff0b0b0989e1e00997) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Again
+
 ## 1.0.3
 
 ### Patch Changes
