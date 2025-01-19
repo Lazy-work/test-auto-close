@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - main
-permissions: write-all
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - name: checkout code repository
         uses: actions/checkout@v4
