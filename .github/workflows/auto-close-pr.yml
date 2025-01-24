@@ -32,10 +32,7 @@ jobs:
           echo "Response Body:"
           cat "$response_body"
 
-          if [[ "$http_status" == "204" ]]; then
-            echo "PR author $GITHUB_ACTOR is a member of $ORGANIZATION. No action needed."
-            exit 0
-          else
+
             echo "PR author $GITHUB_ACTOR is not a member of $ORGANIZATION. Closing PR."
 
             # Log the response from the comment creation
