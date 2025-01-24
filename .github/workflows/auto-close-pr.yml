@@ -15,7 +15,7 @@ jobs:
       - name: Check Organization Membership and Handle PR
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+          PAT_TOKEN: ${{ secrets.READ_ORG_TOKEN }}
           ORGANIZATION: "Lazy-work"
         run: |
           echo "Checking if $GITHUB_ACTOR is a member of $ORGANIZATION..."
