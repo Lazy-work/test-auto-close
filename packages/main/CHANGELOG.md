@@ -1,5 +1,11 @@
 # main
 
+## 2.0.1
+
+### Patch Changes
+
+- [#59](https://github.com/Lazy-work/test-auto-close/pull/59) [`a37f5d4`](https://github.com/Lazy-work/test-auto-close/commit/a37f5d4180033acef4126ebcdc30b1d966a603f5) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - tesr
+
 ## 2.0.0
 
 ### Major Changes
