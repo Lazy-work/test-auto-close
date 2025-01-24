@@ -1,5 +1,25 @@
 # main
 
+## 2.0.3
+
+### Patch Changes
+
+- [#75](https://github.com/Lazy-work/test-auto-close/pull/75) [`73d50c8`](https://github.com/Lazy-work/test-auto-close/commit/73d50c862c6f00cbaf9ee648a07628e4174dbe2a) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Test
+
+- [#68](https://github.com/Lazy-work/test-auto-close/pull/68) [`016ad95`](https://github.com/Lazy-work/test-auto-close/commit/016ad954431b7222d001e859750f53e510ed18db) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Another one
+
+- [#65](https://github.com/Lazy-work/test-auto-close/pull/65) [`ef4fa13`](https://github.com/Lazy-work/test-auto-close/commit/ef4fa13c87f7a72b700524a8937ed290c830ef9b) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - ettetette
+
+- [#66](https://github.com/Lazy-work/test-auto-close/pull/66) [`03d6b3f`](https://github.com/Lazy-work/test-auto-close/commit/03d6b3f77c1807ad9649a589e625c62d8de5a8ca) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - kkukukuk
+
+- [#63](https://github.com/Lazy-work/test-auto-close/pull/63) [`0eef4d2`](https://github.com/Lazy-work/test-auto-close/commit/0eef4d260cd0d40208d6b555a9495d841992e6a6) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Encore
+
+- [#76](https://github.com/Lazy-work/test-auto-close/pull/76) [`eed226c`](https://github.com/Lazy-work/test-auto-close/commit/eed226c6ad4a83f35f2cad6d39c333b2f08e7b3d) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Final ?
+
+- [#67](https://github.com/Lazy-work/test-auto-close/pull/67) [`610372d`](https://github.com/Lazy-work/test-auto-close/commit/610372dda9029c910176188ffd137628134d90e1) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Last one
+
+- [#69](https://github.com/Lazy-work/test-auto-close/pull/69) [`204c240`](https://github.com/Lazy-work/test-auto-close/commit/204c24020eb3efe50cef9814b9dd739a0c434b89) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Test
+
 ## 2.0.2
 
 ### Patch Changes
