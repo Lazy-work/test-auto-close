@@ -1,5 +1,11 @@
 # main
 
+## 2.0.2
+
+### Patch Changes
+
+- [#61](https://github.com/Lazy-work/test-auto-close/pull/61) [`19bfbd6`](https://github.com/Lazy-work/test-auto-close/commit/19bfbd6217d61cb4f1f3dfb9730569a8e6223e47) Thanks [@abdullah-wn](https://github.com/abdullah-wn)! - Test
+
 ## 2.0.1
 
 ### Patch Changes
